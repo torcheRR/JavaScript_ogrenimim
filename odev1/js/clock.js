@@ -2,6 +2,12 @@ let name =prompt("Adinizi giriniz: ")
 let nameDOM=document.querySelector("#myName")
 nameDOM.innerHTML=name
 
+var t = setInterval(()=>{
+  currentTime();
+}, 1000);
+
+
+
 function currentTime() {
     let date = new Date(); 
     let hh = date.getHours();
@@ -25,7 +31,7 @@ function currentTime() {
      let time = hh + ":" + mm + ":" + ss + " " + session + " " + day;
   
     document.getElementById("myClock").innerText = time; 
-    var t = setTimeout(function(){ currentTime() }, 1000); 
+    //var t = setTimeout(function(){ currentTime() }, 1000); 
   
   }
   
